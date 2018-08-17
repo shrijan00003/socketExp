@@ -1,21 +1,11 @@
-const  express = require('express');
+var app = require('express')();
+var http = require('http').Server(app);
 
-const app = express();
-
-const port = 3700;
-
-// jade settings 
-app.set('views', __dirname + '/tpl');
-app.set('view engine', "jade");
-app.engine('jade', require('jade').__express);
-
-app.get("/", function(req, res){
-    res.render("page");
+app.get('/', function(req, res){
+  res.send('<h1>Hello world</h1>');
 });
 
-app.use(express.static(__dirname + '/public'));
-
-var io = require('socket.io').listen(app.listen(port));
-
-console.log("Listening on port " + io);
+http.listen(3700, function(){
+  console.log('listening on *:3700');
+});
 
