@@ -1,0 +1,13 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "description": "simple chat app using socket.io",
+  "main": "index.js",
+  "author": "shrijan tripathi",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "jade": "^1.11.0",
+    "socket.io": "^2.1.1"
+  }
+}
